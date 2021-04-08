@@ -1,7 +1,7 @@
 module.exports = {
     title: 'Token团队培养方案',
     description: 'Token team dev roadmap',
-    base: '/',      // 部署站点的基础路径
+    base: '/token-dev-roadmap/',      // 部署站点的基础路径
     dest: 'dist',   // build的输出位置
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
