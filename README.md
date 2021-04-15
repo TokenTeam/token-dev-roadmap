@@ -30,3 +30,9 @@ yarn build      # 或者 npm run build
 
 # 详细的命令配置见package.json中的script属性
 ```
+
+## 部署
+
+```shell
+sh deploy.sh    # 或者 ./deploy.sh
+```

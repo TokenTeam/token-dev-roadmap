@@ -31,7 +31,7 @@ module.exports = {
         docsBranch: 'main',
         // 允许跳转源文件
         editLinks: true,
-        editLinkText: '查看页面源文件'
+        editLinkText: '协助编辑'
     },
 
     plugins: {
