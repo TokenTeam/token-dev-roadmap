@@ -2,4 +2,11 @@
 autoPrev: base
 ---
 
-# JavaScript 进阶
+# JavaScript 高级
+
+
+## ES6
+
+
+## typescript
+
