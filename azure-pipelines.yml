@@ -2,6 +2,8 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
+variables:
+  branch: 'main'
 
 trigger:
 - main
@@ -9,11 +11,14 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+stages:
+- stage: Sync
+  jobs:
+  - job: Github
+    steps:
+    - script: |
+        git remote add github "https://$(github_pat)@github.com/TokenTeam/token-dev-roadmap.git"
+        git pull github $(branch)
+        git checkout -b $(branch)
+        git push -u github $(branch)
+      displayName: 'Push to remote Github repo.'
