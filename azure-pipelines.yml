@@ -17,7 +17,7 @@ stages:
   - job: Github
     steps:
     - script: |
-        git remote add github "https://$(github_pat)@github.com/TokenTeam/token-dev-roadmap.git"
+        git remote add github "https://$(GITHUB_PAT)@github.com/TokenTeam/token-dev-roadmap.git"
         git pull github $(branch)
         git checkout -b $(branch)
         git push -u github $(branch)
